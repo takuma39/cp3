@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import SubHero from "@/components/layouts/SubHeroLayout.vue";
-import Breadcrumb from "@/components/layouts/BreadcrumbLayout.vue";
+import SubHero from "@/components/layouts/hero/SubHeroLayout.vue";
+import Breadcrumb from "@/components/layouts/breadcrumb/BreadcrumbLayout.vue";
 import Section from "./components/SectionComponent.vue";
 
 const breadcrumbs = [

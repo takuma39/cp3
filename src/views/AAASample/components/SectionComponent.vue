@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { RouterLink } from "vue-router";
-import Heading from "@/components/parts/Heading/HeadingPrimaryComponent.vue";
+import Heading from "@/components/parts/heading/HeadingPrimaryComponent.vue";
 
 const props = defineProps({
   count: {

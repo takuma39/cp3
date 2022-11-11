@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Heading from "@/components/parts/Heading/HeadingPrimaryComponent.vue";
+import Heading from "@/components/parts/heading/HeadingPrimaryComponent.vue";
 const props = defineProps({
   en: {
     type: String,

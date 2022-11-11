@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { RouterLink } from "vue-router";
-import SpMenu from "@/components/layouts/SpMenuLayout.vue";
+import SpMenu from "@/components/layouts/spMenu/SpMenuLayout.vue";
 
 //ページ内スクロール
 let isActive = ref<boolean>(false);

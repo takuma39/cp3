@@ -1,20 +1,41 @@
 <script setup lang="ts">
-import MainHero from "@/components/layouts/hero/MainHeroComponent.vue";
-import Section from "./components/SectionComponent.vue";
-import Sns from "@/components/parts/sns/SnsComponent.vue";
+import { ref, onBeforeMount, onMounted, reactive } from "vue";
+import { useRoute } from "vue-router";
+import SubHero from "@/components/layouts/hero/SubHeroLayout.vue";
+import Breadcrumb from "@/components/layouts/breadcrumb/BreadcrumbLayout.vue";
+import NewsJson from "@/assets/json/news.json";
+
+const route = useRoute();
+let current = ref<number>(0);
+current.value = Number(route.params.id) - 1;
+let News = reactive(NewsJson[current.value]);
+
+const breadcrumbs = [
+  {
+    name: "home",
+    path: "/",
+  },
+  {
+    name: "news",
+  },
+];
 </script>
 
 <template>
   <main>
-    <MainHero />
-    <Section />
-    <Sns url="/" title="test" description="test" />
+    <SubHero en="news" ja="お知らせ" />
+    <Breadcrumb :breadcrumbs="breadcrumbs" />
+    <p>{{ News }}</p>
   </main>
 </template>
 
 <style scoped lang="scss">
 @import "@/assets/sass/app2.scss";
 
+main {
+  height: 200vh;
+  background-color: rgb(142, 151, 235);
+}
 // ブレイクポイント見本
 .test {
   // over

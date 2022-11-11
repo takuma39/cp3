@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
-import Header from '@/components/layouts/HeaderLayout.vue';
-import Footer from '@/components/layouts/FooterLayout.vue';
-import PageTop from '@/components/layouts/PageTopLayout.vue';
+import Header from '@/components/layouts/header/HeaderLayout.vue';
+import Footer from '@/components/layouts/footer/FooterLayout.vue';
+import PageTop from '@/components/layouts/pageTop/PageTopLayout.vue';
 </script>
 
 <template>

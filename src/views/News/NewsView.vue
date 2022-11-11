@@ -1,7 +1,22 @@
 <script setup lang="ts">
-import SubHero from "@/components/layouts/SubHeroLayout.vue";
-import Breadcrumb from "@/components/layouts/BreadcrumbLayout.vue";
-import Section from "./components/SectionComponent.vue";
+import SubHero from "@/components/layouts/hero/SubHeroLayout.vue";
+import Breadcrumb from "@/components/layouts/breadcrumb/BreadcrumbLayout.vue";
+import NewsList from "./components/NewsListWrapper.vue";
+// import NewsJson from "@/assets/json/news.json";
+
+// type NewsObject = {
+//   id: number;
+//   title: string;
+//   date: string;
+//   category: string;
+//   image: string;
+//   text1: string;
+//   text2: string;
+//   text3: string;
+// };
+// const newsDate = NewsJson.sort(
+//   (a: NewsObject, b: NewsObject) => Date.parse(b.date) - Date.parse(a.date)
+// );
 
 const breadcrumbs = [
   {
@@ -18,7 +33,7 @@ const breadcrumbs = [
   <main>
     <SubHero en="news" ja="お知らせ" />
     <Breadcrumb :breadcrumbs="breadcrumbs" />
-    <Section />
+    <NewsList />
   </main>
 </template>
 
@@ -26,8 +41,8 @@ const breadcrumbs = [
 @import "@/assets/sass/app2.scss";
 
 main {
-  height: 200vh;
-  background-color: rgb(142, 151, 235);
+  // height: 200vh;
+  // background-color: rgb(142, 151, 235);
 }
 // ブレイクポイント見本
 .test {
